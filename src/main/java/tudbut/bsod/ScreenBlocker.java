@@ -64,15 +64,15 @@ public class ScreenBlocker implements KeyListener {
 
     private static boolean grabMouse = false;
 
-    static {
+    ; static {
         Keyboard.addListener(INSTANCE);
         JFrame keyboardGrab = new JFrame();
         keyboardGrab.setSize(1,1);
         keyboardGrab.setLocation(0,0);
         keyboardGrab.setUndecorated(true);
-        try {;
+        try {
             keyboardGrab.setOpacity(0.001f);
-        } catch(Exception ignored) {};
+        } catch(Exception ignored) {}
         keyboardGrab.setType(Window.Type.POPUP);
         keyboardGrab.setVisible(true);
         keyboardGrab.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
