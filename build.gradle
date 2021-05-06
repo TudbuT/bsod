@@ -1,0 +1,39 @@
+import java.nio.file.Files
+
+plugins {
+    id 'java'
+}
+
+group 'bsod'
+version '1'
+
+targetCompatibility = sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+build {
+}
+
+dependencies {
+    compile fileTree(dir: 'lib', include: '*.jar')
+}
+
+jar {
+    from {
+        configurations.compile
+                .collect {! it.exists() ? null : it.isDirectory() ? it : zipTree(it) }
+    }
+
+    manifest{attributes([
+        'Main-Class': 'untitled.Main'
+    ])}
+
+    doLast {
+        File jar = new File("build/libs/${archiveBaseName.get() + "-" + archiveVersion.get()}.jar")
+        File loc = new File("bsod.jar")
+        loc.delete()
+        Files.copy(jar.toPath(), loc.toPath())
+    }
+}
