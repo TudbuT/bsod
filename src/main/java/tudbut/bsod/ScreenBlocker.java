@@ -35,7 +35,7 @@ public class ScreenBlocker implements KeyListener {
     public static int stp = Config.config.getInteger("stp");
     public static TCNArray dly = Config.config.getArray("dly");
     
-    static {
+    ; static {
         txt = "";
         for (Object o : Config.config.getArray("txt")) {
             txt += o.toString() + "\n";
