@@ -1,0 +1,40 @@
+bgc: 0078d7
+fgc: ffffff
+fnt {
+    sml {
+        siz: 130
+        ffm: sans-serif
+    }
+    txt {
+        siz: 23
+        ffm: sans-serif
+    }
+    hlp {
+        siz: 15
+        ffm: sans-serif
+    }
+}
+sml: :(
+txt [
+    ; Your PC ran into a problem and needs to restart. We're
+    ; just collecting some error info, and then we'll restart for
+    ; you.
+]
+hlp [
+    ; For more information about this issue and possible fixes, visit
+    ; http://windows.com/stopcode
+    ;
+    ; If you call a support person, give them this info:
+    ; Stop code: $stc
+]
+sqr: y
+stc: SYSTEM_THREAD_EXCEPTION_NOT_HANDLED
+ngt: n
+max: 80
+stp: 20
+dly [
+    ; 5000
+    ; 5000
+    ; 10000
+    ; 10000
+]

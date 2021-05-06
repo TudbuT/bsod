@@ -1,0 +1,21 @@
+bgc = background color
+fgc = foreground color
+fnt = font:
+    siz = size
+    ffm = font family
+    sml = smiley
+    txt = text
+    hlp = help text
+sml = smiley to show
+txt = text to show, '$osn' replaces to the OS name (array)
+hlp = help text to use, '$stc' replaces to the stop code, '$osn' replaces to the OS name (array)
+stc = stop code
+sqr = show qr code (y/n)
+ngt = go negative after max is reached (y/n)
+max = max percentage
+stp = step amount for percentage
+dly = delay (array):
+    - Before change
+    - After change
+    - When going negative: Before change
+    - When going negative: After change
