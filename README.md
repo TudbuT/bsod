@@ -1,0 +1,22 @@
+# TudbuT/BSOD
+Free and open source BSOD simulator compatible with Windows and Unix-like operating systems
+
+---
+
+## How to use:
+
+- Download BSOD.jar
+- Make adjustments to the config bundled in the jar if needed
+- Run the jar
+- **Exit with [ESC]+[F10]**
+
+---
+
+## How it works
+
+- Loop through each screen
+  - Create a fullscreen window (that doesn't appear on task bar)
+  - Render content read from config.txt to it
+- Grab mouse (java.awt.Robot) by moving it to its original position
+- Grab keyboard by making an invisible 1x1 frame that captures keyboard events
+- Make all frames stay on top
