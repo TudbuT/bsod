@@ -7,7 +7,7 @@ import tudbut.parsing.TCN;
 import tudbut.parsing.TCNArray;
 import tudbut.rendering.Maths2D;
 import tudbut.tools.ReflectUtil;
-;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
