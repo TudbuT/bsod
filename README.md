@@ -20,3 +20,15 @@ Free and open source BSOD simulator compatible with Windows and Unix-like operat
 - Grab mouse (java.awt.Robot) by moving it to its original position
 - Grab keyboard by making an invisible 1x1 frame that captures keyboard events
 - Make all frames stay on top
+
+---
+
+### Contributing
+
+Forks are very welcome, as long as they are actual forks, and not pastes!
+
+I will accept PRs under these conditions:
+- Commits are descriptive *i dont like "changes", i like "added X, fixed bug where Y did Z"*
+- Code style matches standards
+- No libraries are added
+- No copied content is added
