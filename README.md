@@ -23,6 +23,16 @@ Free and open source BSOD simulator compatible with Windows and Unix-like operat
 
 ---
 
+## Use as library
+
+This CAN be used as library, however, the config has to be "spoofed". This can be 
+done by accessing the static fields in the ScreenBlocker (which is what displays
+the BSOD) BEFORE calling ScreenBlocker.blockAll. 
+Unblocking works slightly differently to blocking. Here, two calls are
+needed: ScreenBlocker.unBlockAll() and ScreenBlocker.release().
+
+---
+
 ### Contributing
 
 Forks are very welcome, as long as they are actual forks, and not pastes!

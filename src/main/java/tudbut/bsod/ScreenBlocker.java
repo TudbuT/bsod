@@ -22,18 +22,19 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class ScreenBlocker implements KeyListener {
     
-    public static int bgc = Integer.parseInt(Config.config.getString("bgc"), 16);
-    public static int fgc = Integer.parseInt(Config.config.getString("fgc"), 16);
-    public static TCN fnt = Config.config.getSub("fnt");
-    public static String sml = Config.config.getString("sml");
-    public static String txt;
-    public static String hlp;
-    public static String stc = Config.config.getString("stc");
-    public static boolean sqr = Config.config.getString("sqr").equalsIgnoreCase("y");
-    public static boolean ngt = Config.config.getString("ngt").equalsIgnoreCase("y");
-    public static int max = Config.config.getInteger("max");
-    public static int stp = Config.config.getInteger("stp");
-    public static TCNArray dly = Config.config.getArray("dly");
+    // Aligned variables are bad style, but this would otherwise be unreadable
+    public static int       bgc = Integer.parseInt(Config.config.getString("bgc"), 16);
+    public static int       fgc = Integer.parseInt(Config.config.getString("fgc"), 16);
+    public static TCN       fnt = Config.config.getSub("fnt");
+    public static String    sml = Config.config.getString("sml");
+    public static String    txt ;
+    public static String    hlp ;
+    public static String    stc = Config.config.getString("stc");
+    public static boolean   sqr = Config.config.getString("sqr").equalsIgnoreCase("y");
+    public static boolean   ngt = Config.config.getString("ngt").equalsIgnoreCase("y");
+    public static int       max = Config.config.getInteger("max");
+    public static int       stp = Config.config.getInteger("stp");
+    public static TCNArray  dly = Config.config.getArray("dly");
     
     ; static {
         txt = "";
@@ -51,7 +52,7 @@ public class ScreenBlocker implements KeyListener {
 
     private static final ScreenBlocker INSTANCE = new ScreenBlocker();
     private static final ArrayList<Window> frames = new ArrayList<>();
-    static Robot ROBOT;
+    public static Robot ROBOT;
     private static int grabX = 0;
     private static int grabY = 0;
 
