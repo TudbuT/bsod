@@ -1,4 +1,4 @@
-package untitled;
+package tudbut.bsod;
 
 import de.tudbut.tools.Keyboard;
 import de.tudbut.tools.Tools;

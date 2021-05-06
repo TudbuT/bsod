@@ -1,7 +1,7 @@
-untitled/Config.java
- untitled.Config
-untitled/ScreenBlocker.java
- untitled.ScreenBlocker
- untitled.ScreenBlocker$1
-untitled/Main.java
- untitled.Main
+tudbut/bsod/Config.java
+ tudbut.bsod.Config
+tudbut/bsod/ScreenBlocker.java
+ tudbut.bsod.ScreenBlocker
+ tudbut.bsod.ScreenBlocker$1
+tudbut/bsod/Main.java
+ tudbut.bsod.Main

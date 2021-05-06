@@ -1,4 +1,4 @@
-package untitled;
+package tudbut.bsod;
 
 import de.tudbut.io.StreamReader;
 import tudbut.parsing.TCN;

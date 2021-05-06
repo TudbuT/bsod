@@ -1,4 +1,4 @@
-package untitled;
+package tudbut.bsod;
 
 public class Main {
     
