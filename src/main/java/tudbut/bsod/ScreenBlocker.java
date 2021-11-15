@@ -172,7 +172,7 @@ public class ScreenBlocker implements KeyListener {
         frame.set(new JFrame() {
             BufferedImage image;
 
-            { this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE); this.setUndecorated(true); }
+            { this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE); this.setUndecorated(true); setType(Window.Type.POPUP); }
 
             @Override
             public void paint(Graphics g) {
