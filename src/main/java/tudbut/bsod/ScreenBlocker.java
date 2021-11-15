@@ -129,11 +129,12 @@ public class ScreenBlocker implements KeyListener {
         }).start();
     }
     
-    // Set invisible cursor
+    // Set invisible cursor and add listener
     private static void initFrame(Window frame) {
         BufferedImage cursor = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
         cursor.setRGB(0,0, 0x00000000);
         frame.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(cursor, new Point(0, 0), "emptiness"));
+	frame.addKeyListener(INSTANCE);
     }
     
     // Show BSOD
@@ -168,8 +169,10 @@ public class ScreenBlocker implements KeyListener {
         // Progress display
         AtomicInteger p = new AtomicInteger();
         
-        frame.set(new Window(null, null) {
+        frame.set(new JFrame() {
             BufferedImage image;
+
+            { this.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE); this.setUndecorated(true); }
 
             @Override
             public void paint(Graphics g) {
