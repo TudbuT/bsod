@@ -13,21 +13,25 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    atj
+}
+
 build {
 }
 
 dependencies {
-    compile fileTree(dir: 'lib', include: '*.jar')
+    atj implementation(fileTree(dir: 'lib', include: '*.jar'))
 }
 
 jar {
     from {
-        configurations.compile
+        configurations.atj
                 .collect {! it.exists() ? null : it.isDirectory() ? it : zipTree(it) }
     }
 
     manifest{attributes([
-        'Main-Class': 'untitled.Main'
+        'Main-Class': 'tudbut.bsod.Main'
     ])}
 
     doLast {
